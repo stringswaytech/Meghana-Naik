@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>StringWayTech</title>
+	<link rel="stylesheet" type="text/css" href="string.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    			<ul class="navbar-nav mr-auto">
+      				<li class="nav-item dropdown">
+        				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         				 <strong id="course">Courses</strong>
+        				</a>
+        				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          					<a class="dropdown-item" href="#">Stream</a>
+          					<a class="dropdown-item" href="#">Syllabus</a>
+          					<a class="dropdown-item" href="#">Question Paper</a>
+          					<a class="dropdown-item" href="#">Study Material</a>
+        				</div>
+        			</li>
+        			<li>
+        				<form class="form-inline my-2 my-lg-0">
+      						<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      						<button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+    					</form>
+        			</li>
+    			</ul>
+    		</div>
+    		<div id="nav">
+    			<a class="navbar-brand" href="#"><img id="logo" src="logo.jpg"><strong>StringWayTech</strong></a>
+      		</div>
+    		<div>
+    			<ul class="navbar-nav mr-auto">
+
+             <div class="dropdown">
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 <strong id="course">User Name</strong>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Notification</a>
+                    <a class="dropdown-item" href="#">Setting</a>
+                    <a class="dropdown-item" href="#">help</a>
+                    <a class="dropdown-item" href="#">Log out</a>
+                </div>
+              </li>
+            </div>
+
+      			</ul>
+			</div>
+	</nav>	
+	
+<!--Edit profile-->
+<div style="background-color:#e5e5e5;padding:50px;">
+ <div ><h2>User Name will be shown here</h2></div>
+  <div class="user-name">
+    <a onclick="document.getElementById('id01').style.display='block'" href="#">Edit Name</a>&nbsp;&nbsp;&nbsp;
+    <a onclick="document.getElementById('id01').style.display='block'" href="#">Edit Bio</a>
+  </div>
+  <div class="edit-profile">
+      <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-blue">Edit Profile</button>
+  </div>
+
+  <!--modal menu-->
+    <div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-4">
+      <header class="w3-container w3-blue"> 
+        <span onclick="document.getElementById('id01').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>Edit Basic Info</h2>
+      </header>
+      <div class="w3-container">
+<div class="container">
+  <form action="/action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Real Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">User Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Country</label>
+      </div>
+      <div class="col-75">
+        <select id="country" name="country">
+          <option value="australia">India</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Bio</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+
+      </div>
+      <footer class="w3-container w3-blue">
+        <p></p>
+      </footer>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script>
+// Edit Profile Modal
+var modal = document.getElementById('id01');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<div class="container-fluid">
+    <div class="row">
+      <span class="col-sm-2 left" >
+      	<br>
+        <nav class="nav flex-column">
+            <h6>My Stuff</h6>
+            <a class="nav-link" href="#">Courses</a>
+           <h6>My Account</h6>
+            <a class="nav-link" href="#">Progress</a>
+            <a class="nav-link" href="#">Profile</a>
+            <a class="nav-link" href="#">Teachers</a>
+          </nav>
+      </span>
+      <div class="col-sm-8">
+      	<br>
+  <h2>Total there will be approx 6 questions each of 3 marks , from all the chapters of the syllabus(Attempt any 5).</h2>
+<button class="accordion"><span class="spinner-grow spinner-grow-sm"></span>Chemistry December 2016 </button>
+<div class="panel">
+ <p>		<ol type = "1"> <li><br>Attempt any five from the following:   [15] <br>
+	<ol type ="a">
+	<li>What is the role of polymers in medicine and surgery ? Explain with the help of any three examples.
+    <li>Distinguish between alkaline and non alkaline hardness.
+    <li>State the limitations of phase rule. 
+    <li>What are carbon nanotubes ? Explain different types of carbon nanotubes.
+    <li>When would solid lubricants are used?
+    <li>6 ml of waste water was refluxed with 25 ml of K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub> solution and after refluxing the excess unreacted dichromate required 20ml of 0.1 N FAS solution . A blank of distilled water on refluxing with 25 ml of K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub> solution required 35 ml of O.1N FAS solution. Calculate the
+        COD of waste water sample.
+		
+
+    </ol>
+	<li> <br>
+	<ol type = "a">
+	<li>Calculate the quantity of pure lime and soda required for softening of 40000 liters of water containing the following impurities<br>
+		Ca (HCO<sub>3</sub>)<sub>2</sub> = 16ppm ,Mg (HCO<sub>3</sub>)<sub>2</sub> = 7 ppm , CaSO<sub>4</sub> =13 ppm , MgCl<sub>2</sub> = 10 ppm ,NaCl= 2 ppm. [6]
+	<li> (i) Distinguish between thermoplastics and thermosettings. [3]<br>
+		 (ii)Define flash and fire points. [2]
+	<li>Write the CVD method for preparation of carbon nanotubes.[4]
+	</ol>
+	<li><br>
+	<ol type ="a">
+	<li>What is meant by fabrication of plastics ? Explain injection moulding with the help of a neat diagram.[6]
+	<li>(i) State the condensed phase.[3]<br>
+		(ii) How is gypsum useful in setting and hardening of cement ?[2] 
+	<li>The hardness of 85000 liters of water sample was removed by passing it through a zeolite softener. The zeolite required 2000 liters of NaCl
+			solution containing 190 mg/lit of NaCl for regeneration. Calculate the hardness of water.[4]
+	</ol>
+	<li><br>
+	<ol type ="a">
+	<li>How is activated sludge process carried out for the waste water ? Explain with flow sheet diagram.[6]
+	<li>(i) 1.4 gm of oil required 1.8 ml of 0.01 N KOH for neutralization.Calculate the acid value and mention whether the oil is suitable to be used or not.[3]<br>
+		(ii) Write the applications of fullerenes.[2]
+	<li>What are the functions of fillers and plasticizers in the compounding of plastics ?[4]
+	</ol>
+	<li> <br>
+	<ol type ="a">
+	<li>Write the preparation, properties and uses of PMMA and Buna-S.[6]
+	<li>(i) What are the advantages ion exchange process ?[3]<br>
+		(ii) What is oilness?What is it's importance in lubrications ?[2]
+	<li>What is the application of phase rule to one component water system ?Explain with the help of phase diagram.[4]
+	</ol>
+	
+	<li> <br>
+	<ol type="a">
+	<li>Define lubricants and lubrication. Discuss the hydrodynamic lubrication in detail.[6]
+	<li>(i)Define phase, component and degree of freedom.[3]<br>
+		(ii)What are the industrial applications of ultrafiltration ?[2]
+	<li>What is RCC ? Write the advantages of it.[4]
+	</ol>
+	
+	</p>
+</div>
+<button class="accordion"><span class="spinner-grow spinner-grow-sm"></span>Chemistry December 2017</button>
+<div class="panel">
+ <p>		<ol type = "1"> <li><br>Attempt any five from the following:   [15] <br>
+	<ol type ="a">
+	<li>Distinguish between BOD and COD.
+	<li>Give the preparation,properties and uses of Kevlar.
+	<li>Calculate total hardness,in ppm,in given water sample:<br>
+		(i)50ml standard hard water,containing 1mg pure CaCO3 per ml,consumed 20ml EDTA solution.<br>
+		(ii)50ml water sample consumed 30ml EDTA solution using Erio-Black T indicator.
+	<li>Define flash point and fire point?Give it's significance.
+	<li>State the number of phases,component for the following equilibrium:
+		(i)H<sub>2</sub>O<sub>(s)</sub><span class="dblarrow">&rarr;</span>H<sub>2</sub>O<sub>(l)</sub><span class="dblarrow">&rarr;</span>H<sub>2</sub>O<sub>(g)</sub>
+		(ii)Mixture of rhombic and monoclinic sulphur.
+	<li>What are plasticizers?Give it's uses and examples.
+	<li>Give a brief note on CNT's.
+
+    </ol>
+	<li> <br>
+	<ol type = "a">
+	<li>Calculate the quantity of lime and soda required for softening of 1,00,000 litres of water containing the following impurities in ppm.The purity of lime is 70% and soda is 85%.<br>	[6]
+		Ca(HCO<sub>3</sub>)<sub>2</sub>=30.2,Mg(HCO<sub>3</sub>)<sub>2</sub>=20.8,CaCl<sub>2</sub>=28.1,MgCl<sub>2</sub>=8.78,CaSO<sub>4</sub>=35,MgSO<sub>4</sub>=6.7.
+	<li>(i)Distinguish between thermoplastic and thermosetting resins.	[3]<br>
+		(ii)What are the functions of lubricants.	[2]
+	<li>What is decay of concrete?Discuss its prevention.	[4]
+	</ol>
+	<li><br>
+	<ol type ="a">
+	<li>Define lubrication.List the methods used.Discuss extrusion moulding in detail.	[6]
+	<li>(i)What are the limitations of phase rule?	[3]<br>
+		(ii)Draw a neat,labeled diagram of the Rotary kiln.	[2]
+
+	<li>15,000 litres of hard water was passed through a zeolite softener.The exhausted zeolite required 120 litres of NaCl having strength of 30g/l of NaCl.Calculate the hardness of water.	[4]
+	</ol>
+	<li><br>
+	<ol type ="a">
+	<li>What is activated sludge?How is the process carried out for the treatment of waste water ? Explain with flow sheet diagram.	[6]
+	<li>(i)20ml of lubricating oil was dissolved in alcohol,The solution was titrated against 0.1N KOH solution.At the end point the burette reading was found to be 2.5 ml.Calculate the acid value of oil(density of oil=0.86g/ml)	[3]<br>
+		(ii)Distinguish between dry and wet process for manufacturing of Portland cement.	[2]
+	<li>List the uses of polymers in medicine and surgery.	[4]
+	</ol>
+	<li> <br>
+	<ol type ="a">
+	<li>Write notes on(any 2)	[6]<br>
+		(i)Glass transition temperature.<br>
+		(ii)Conductig polymers.<br>
+		(iii)Vulcanization.<br>
+	<li>(i)Discuss the treatment of water using bleaching powder.	[3]<br>
+		(ii)Explain the mechanism of Extreme pressure lubrication.[2]
+	<li>What is reduced phase rule?Draw the phase diagram of the Ag-Pb system with proper labelling.	[4]
+	</ol>
+	
+	<li> <br>
+	<ol type="a">
+	<li>What are the conditions for use of solid lubricants?Discuss the structure and uses of Graphite.	[6]
+	<li>(i)Discuss the Triple point in a one-component system.	[3]<br>
+		(ii)Explain reverse osmosis.	[2]
+	<li>Write a note on Fullerene.	[4]
+	</ol>
+	
+	</p>
+</div>
+<button class="accordion"><span class="spinner-grow spinner-grow-sm"></span>Chemistry December 2018</button>
+<div class="panel">
+ <p>		<ol type = "1"> <li><br>Attempt any five from the following:   [15] <br>
+	<ol type ="a">
+	<li>Explain the principle of EDTA method.
+	<li>What is glass transition temperature. Write its significance.
+	<li>Write the significance of the following properties of lubricants:<br>	
+		(i)Emulsification<br> 
+		(ii)Cloud point<br> 
+		(iii) Fire point<br>
+	<li>What is RCC? What are the advantages of RCCover concrete?
+	<li>Explain the reduced phase rule.
+	<li>Distinguish between thermoplastic and thermosetting polymer.
+	<li>20 ml sample of	waste water	was	refluxed with 30ml of potassium dichromate solution and	after refluxing	the	excess unreacted dichromate
+		required 11 ml of 0.1N FAS solution.Blank of 20ml of distilled water on refluxing with 30ml of dichromate solution required 14ml of  
+		0.1N FAS solution. Calculate the COD value of wastewater.
+
+    </ol>
+	<li> <br>
+	<ol type = "a">
+	<li>A sample of water contains following impurities:<br>	[6]
+		Mg(HCO<sub>3</sub>)<sub>2</sub>=73 mg/lit, MgSO<sub>4</sub>= 120 mg/lit, CaCl<sub>2</sub>=222 mg/l and Ca (NO<sub>3</sub>)<sub>2</sub>=164mg/lit.The purity of lime is 74% and soda is 90%.
+		Calculate the quantity of lime and soda needed for softening of 50,000 litres of water.
+	<li>(i) Write a brief note on polymers used in medical field.		[3]<br>
+		(ii) Name two additives added in blended oils. Give one example of each.		[2]
+	<li>Explain with the help of chemical reactions “ Setting and Hardening “ of cement.	[4]
+	</ol>
+	<li><br>
+	<ol type ="a">
+	<li>What is fabrication of plastic? Explain injection moulding process with a neat diagram.	[6]
+	<li>(i)Discuss the advantages and limitations of phase rule.	[3]<br>
+		(ii)Differentiate between SWNT and MWNT.	[2]
+	<li>A zeolite softener was completely exhausted and was regenerated by passing 1000 litres 4 of NaCl solution, containing 100mg/lit of NaCl. 	[4]
+		How many litres of a sample water of hardness 500ppm can be softened by this softener?
+	</ol>
+	<li><br>
+	<ol type ="a">
+	<li>Draw the diagram for demineralization process and write suitable reactions involved in the process. What are the advantages and disadvantages of the method.	[6]
+	<li>(i)Find the acid value of the given oil whose 20ml required 2.8ml of N/10 KOH during titration. 	[3]<br>
+		(Density of oil = 0.86g/ml)<br>
+		(ii)Write a short note on decay of concrete.	[2]
+	<li>Natural rubber requires vulcanization. Give reasons.With appropriate reactions explain how the drawbacks are overcomed?	[4]
+	</ol>
+	<li> <br>
+	<ol type ="a">
+	<li>Write preparation, properties and uses of following polymers:(Anytwo)	[6]<br>
+		i) Kevlar ii) Silicone rubber iii) BunaS	
+	<li>(i) Explain Activated sludge method with the help of diagram.	[3]<br>
+		(ii) What is grease? What are the conditions in which greases are used?		[2]
+	<li>Draw the phase diagram of one component system and find out the number of degree of freedom along the curves and areas.		[4]
+	</ol>
+	
+	<li> <br>
+	<ol type="a">
+	<li>What are lubricants? Define	Lubrication.Explain	Hydrodynamic lubrication mechanism with neat diagram.	[6]
+	<li>(i) Define a) Phase b) Component c) Degree of freedom	[3]<br>
+		(ii) Write a short note onReverse Osmosis.	[2]
+	<li>Explain laser ablation method for production of CNTs.	[4]
+	</ol>
+	
+	</p>
+</div>
+<button class="accordion"><span class="spinner-grow spinner-grow-sm"></span>Chemistry May 2017</button>
+<div class="panel">
+ <p>		<ol type = "1"> <li><br>Attempt any five from the following:   [15] <br>
+	<ol type ="a">
+	<li>What are cation and anion exchangers?
+	<li>Give the preparation, properties and uses of polymethyl metha acrylate polymer.
+	<li>A 10ml of sample of waste water was refluxed with 20ml of potassium dichromate solution and after refluxing the excess unreacted dichromate required 36.2 ml of 0.1M FAS solution. A blank of 10ml of distilled water on refluxing with 20ml of dichromate solution required 46ml of 0.1M FAS solution.
+		Calculate the COD Value of the waste water.
+	<li>Define<br> 
+		(i) Flash point<br> 
+		(ii)Oilness<br>
+		(iii) Pour point<br> 
+	<li>What is Reduced phase rule?
+	<li>What are the drawbacks of natural Rubber? 
+	<li>Explain CVD (chemical vapour deposition) method for production of CNT's.
+
+    </ol>
+	<li> <br>
+	<ol type = "a">
+	<li>Calculate the amount of lime (80% pure) and soda(90%) required for softeninh of 50000 litres of hard water whose chemical analysis results are given below:<br>		[6] 
+		Ca(HCO<sub>3</sub>)<sub>2</sub>= 40.5 mg/L, Mg(HCO<sub>3</sub>)<sub>2</sub>= 73.0 mg/L,MgSO<sub>4</sub>=60.0 mg/L,CaSO<sub>4</sub>=34.0mg/L,CaCl<sub>2</sub>=27.5 mg/L and NaCl=20.0mg/L.
+	<li>(i) Write a brief note on conducting polymers.<br> 	[3]
+		(ii) Mention the conditions under which semi-solid lubricants can be used.	[2]
+	<li>Explain with the help of chemical reactions ‘setting and hardening ‘ process of cement.	[4]
+	</ol>
+	<li><br>
+	<ol type ="a">
+	<li>Write a short note on:	[6]<br>
+		(i) Injection moulding method for plastics.
+		(ii) Polymer in medicine and surgery.
+	<li>(i)Draw and explain the important features of phase diagram of water system.[3]<br>
+		(ii)Mention the Raw materials of Portland cement along with their percentage composition.	[2]<br>
+	<li>Ten thousand liter amount of hard water was made soft with zeolite. The exhausted zeolite required a total of 8 litres NaCl solution containing 150 gm per litre for regeneration. Calculate the hardness of hard water.	[4]
+	</ol>
+	<li><br>
+	<ol type ="a">
+	<li>Explain lon- Exchange process for softening of hard water. What are it’s advantages and dis-advantages.	[6]
+	<li>(i) 9m of oil is taken from machine and it requires 1.5 ml of 0.04 N KOH. Find acid value.		[3]<br>
+		(density of oil= 0.81g/ml)<br> 
+		(ii) Write a note on Deccay of concrete.	[2]
+	<li> What are the additives mixed with plastics for its compounding? Explain their functions. 	[4]
+	</ol>
+	<li> <br>
+	<ol type ="a">
+	<li>(i) Distinguish between Thermo- plastic and Thermosetting plastic.	[6]<br>
+		(ii) Write a note on Visco- elastic state.<br>
+	<li>(i) Write a note on Ultra-filteration method for purification of water.	[3]<br>
+		(ii)Give the important functions of Lubricant.[2]
+	<li>What is the mathematical form of the Gibb’s phase rule equation? Explain the meaning of each one of the terms involved in it.	[4]
+	</ol>
+	
+	<li> <br>
+	<ol type="a">
+	<li>What is Lubrication? Explain the mechanism of fluid film Lubrication.	[6]
+	<li>(i) What is meant by Triple point? Apply phase rule and find degree of freedom for Triple point.	[3]<br>
+		(ii)Distinguish between temporary and permanent hardness of water.	[2]
+	<li>Describe the wet process for manufacture of Portland cement.	[4]
+	</ol>
+	
+	</p>
+</div>
+<button class="accordion"><span class="spinner-grow spinner-grow-sm"></span>Chemistry May 2018</button>
+<div class="panel">
+ <p>		<ol type = "1"> <li><br>Attempt any five from the following:   [15] <br>
+	<ol type ="a">
+	<li>Discuss the drawbacks of natural Rubber.
+	<li>Explain disinfection of water by addition of bleaching Powder.
+	<li>What are the limitations of Phase Rule?
+	<li>Discuss fullerenes. Give its applications.
+	<li>Write a note on Greases.
+	<li>A 10ml of sample of water was refluxed with 20ml potassium dichromate solution and after refluxing, the excess unreacted dichromate required 26.2ml of 0.1M FAS solution. A blank 10m1 of distilled water on refluxing with 20ml of dichromate solution required 36ml of 0.1M FAS solution.
+		 Calculate the COD of waste water.
+	<li>Discuss the role of Polymers in Medicine and surgery.
+    </ol>
+	<li> <br>
+	<ol type = "a">
+	<li>Calculate the amount of lime (85% pure) and Soda (95% pure) required to soften one million liters of water which contains CaCO<sub>3</sub>=12.5ppm, MgCO<sub>3</sub> = 8.4ppm, CaCl<sub>2</sub>= 22.2ppm, MgCl<sub>2</sub>	[6]
+			=9.5 ppm, CO<sub>2</sub>—33ppm, HCl = 7.3ppm, Organic matter = 16.8ppm.
+	<li>(i) Give the preparation, properties and uses of Kevlar.	[3]<br>
+		(ii) Define Cloud  Point and Pour Point of a lubricant.	[2]
+	<li>Write a note on Decay of Concrete.	[4]
+	</ol>
+	<li><br>
+	<ol type ="a">
+	<li>Define Moulding. List the different techniques of moulding. Explain injection moulding with the help of neat diagram.	[6]
+	<li>(i) Explain the term ‘Phase’ with appropriate examples.	[3]<br>
+		(ii) Discuss the role of gypsum during the manufacturing  of Portland cement.	[2]
+	<li>Calculate the total hardness in ppm, in given water sample.<br>		[4]
+			: 50ml of standard hard water, containing 1mg pure CaCO<sub>3</sub> per ml consumed 20ml EDTA solution.
+			: 50ml of water sample consumed 30ml EDTA solution using EBT indicator.
+	</ol>
+	<li><br>
+	<ol type ="a">
+	<li>Explain the zeolite method for softening of water giving suitable diagram and reactions.What are the limitations of this method.	[6]
+	<li>(i)6gms of oil was saponified with 50ml of 0.5N alcoholic KOH solution.After refluxing for 2 hours the mixture was titrated with 25ml 0.5N HCl.Find the saponification value of oil.<br> 	[3]
+		(ii)Distinguish between the wet and Dry process for manufacturing of Portland cement.	[2]
+	<li>Discuss the following additives in compounding of plastics<br>	[4]
+		:Fillers	:Plasticizers
+	</ol>
+	<li> <br>
+	<ol type ="a">
+	<li>Write notes on :(anytwo)<br>	[6]
+		:Glass transition temperature		:Buna—S rubber		:Vulcanisation<br>
+	<li>(i)Distinguish between: BOD and COD.	[3]<br>
+		(ii)Define Oilness.What is its significance.	[2]
+	<li>Discuss the application of Phase Rule to the one component system based on;<br>	[4]
+		Diagram ,triple point<br>
+	</ol>
+	
+	<li> <br>
+	<ol type="a">
+	<li>Define lubricants and lubrication.Mention the various mechanisms involved in lubrication of machines. Discuss boundary lubrication.	[6]
+	<li>(i)What is reduced or condensed Phase Rule.	[3]<br>
+		(ii)Discuss Reverse Osmosis.[2]
+	<li>What are carbon nanotubes?What are its types?Discuss the laser method for its preparation.	[4]
+	</ol>
+	
+	</p>
+</div>
+<button class="accordion"><span class="spinner-grow spinner-grow-sm"></span>Chemistry May 2019</button>
+<div class="panel">
+
+ <p>		<ol type = "1"> <li><br>Attempt any five from the following:   [15] <br>
+	<ol type ="a">
+	<li>Write a brief note on Reverse Osmosis.
+	<li>Write methods of preparation, properties and uses of polyurethane rubber.
+	<li>Define and discuss giving significance of the following<br>
+		(i)Viscosity	(ii)Cloud Point<br>
+	<li>Write advantages and drawback of Phase Rule.
+	<li>A hard water sample contains following impurities (in mg/L)<br>
+		Mg(HCO<sub>3</sub>)<sub>2</sub>= 150 ;NaCl =77 ;CaCl<sub>2</sub>= 135;MgSO<sub>4</sub>=85.<br>
+		Calculate temporary, permanent and total hardness of the given sample of water.<br>
+	<li>Discuss the effect of temperature on polymers.
+	<li>Why gypsum is added during manufacturing of the cement?
+
+    </ol>
+	<li> <br>
+	<ol type ="a">
+	<li>A hard water sample has following composition<br>	[6]
+		CaSO<sub>4</sub>= 170mg/L; Ca(HCO<sub>3</sub>)<sub>2</sub>= 130mg/L; Mg(HCO<sub>3</sub>)<sub>2</sub>=95mg/L;
+		HCl = 58mg/L; KNO<sub>3</sub>= 75mg/L<br>
+		Calculate lime (90% pure) and soda (95% pure) required for complete softening of one million liters of above hard water sample.<br>
+	<li>(i) What is Glasstransition temperature?	[3]<br>
+		(ii) What are semi sold lubricants? Under which conditions they are used?	[2]
+	<li>Explain briefly Carbon nanotubes by CVD method.	[4]
+    </ol>
+	<li><br>	
+	<ol type ="a">
+	<li>What is Natural rubber? What is vulcanized of rubber?  Compare the properties of vulcanized rubber over natural rubber.	[6]
+	<li>(i)  What is ‘Triple Point’? Write the condition at which triple point exists for water system.	[3]<br>
+		(ii) What are Fullerenes? Write important properties and uses of Fullerene.	[2]
+	<li>In the process of determination of hardness, a standard hard watersample was prepared by dissolving 2.5g CaCO<sub>3</sub> and making solution upto one liter.	[4]
+		50ml of above hard water required 45 ml of EDTA. 50ml of unknown hard water sample was titrated it required 30ml of same EDTA.
+		The unknown hard water sample was boiled and filtered.
+		50ml of this boiled sample required 20ml of EDTA. Calculate hardness of all types of unknown hard water sample.
+	</ol>
+
+	<li><br>
+	
+	<ol type ="a">
+	<li>Draw a neat labeled diagram and explain zeolite process of softeningof hard	water. Discuss its merits and demerits.	[6]
+	<li>(i)10g of lubricating oil was heated with 25ml of 50% alcohol,the resultant	mixture required 25ml of N/10 KOH.	[3]
+		 The blank reading was obtained to be 8ml of same KOH. Calculate acid value of the lubricating oil.<br>
+		(ii) Explain the terms: 	[2]
+		(a) Concrete	(b) RCC<br>
+	<li>Explain the importance of polymers in the field of surgery and medicine.	[4]	
+    </ol>
+	<li> <br>
+
+	<ol type ="a">
+	<li>What is compounding of plastic? Explain the role played by various constituents used during manufacturing of plastic.	[6]
+	<li>(i)Define and briefly explain	[3]<br>
+			Biological Oxygen Demand (BOD )<br>
+			Chemical Oxygen Demand (COD).<br>
+		(ii)Write important functions of lubricants.	[2]
+	<li>Draw and explain phase diagram of Pb-Ag system.	[4]
+    </ol>
+	
+	<li> <br>
+
+	<ol type ="a">
+	<li>Draw a neat diagram and explain the mechanism of thick film lubrication.	[6]
+	<li>(i)Write Gibb’s mathematical equation of phase rule and define the terms involved in it.	[3]<br>
+		(ii) With chemical equations, explain role played by bleaching powder in water treatment.	[2]
+	<li>Explain manufacturing of the cement by wet process materials.	[4]
+    </ol>
+	
+	</p>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+</body>
+</html>
