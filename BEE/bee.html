@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>StringWayTech</title>
+	<link rel="stylesheet" type="text/css" href="string.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+    			<ul class="navbar-nav mr-auto">
+      				<li class="nav-item dropdown">
+        				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         				 <strong id="course">Courses</strong>
+        				</a>
+        				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          					<a class="dropdown-item" href="#">Stream</a>
+          					<a class="dropdown-item" href="#">Syllabus</a>
+          					<a class="dropdown-item" href="#">Question Paper</a>
+          					<a class="dropdown-item" href="#">Study Material</a>
+        				</div>
+        			</li>
+        			<li>
+        				<form class="form-inline my-2 my-lg-0">
+      						<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      						<button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+    					</form>
+        			</li>
+    			</ul>
+    		</div>
+    		<div id="nav">
+    			<a class="navbar-brand" href="#"><img id="logo" src="logo.jpg"><strong>StringWayTech</strong></a>
+      		</div>
+    		<div>
+    			<ul class="navbar-nav mr-auto">
+
+             <div class="dropdown">
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 <strong id="course">User Name</strong>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Notification</a>
+                    <a class="dropdown-item" href="#">Setting</a>
+                    <a class="dropdown-item" href="#">help</a>
+                    <a class="dropdown-item" href="#">Log out</a>
+                </div>
+              </li>
+            </div>
+
+      			</ul>
+			</div>
+	</nav>	
+	
+<!--Edit profile-->
+<div style="background-color:#e5e5e5;padding:50px;">
+ <div ><h2>User Name will be shown here</h2></div>
+  <div class="user-name">
+    <a onclick="document.getElementById('id01').style.display='block'" href="#">Edit Name</a>&nbsp;&nbsp;&nbsp;
+    <a onclick="document.getElementById('id01').style.display='block'" href="#">Edit Bio</a>
+  </div>
+  <div class="edit-profile">
+      <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-blue">Edit Profile</button>
+  </div>
+
+  <!--modal menu-->
+    <div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-4">
+      <header class="w3-container w3-blue"> 
+        <span onclick="document.getElementById('id01').style.display='none'" 
+        class="w3-button w3-display-topright">&times;</span>
+        <h2>Edit Basic Info</h2>
+      </header>
+      <div class="w3-container">
+<div class="container">
+  <form action="/action_page.php">
+    <div class="row">
+      <div class="col-25">
+        <label for="fname">Real Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="lname">User Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="country">Country</label>
+      </div>
+      <div class="col-75">
+        <select id="country" name="country">
+          <option value="australia">India</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="subject">Bio</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
+
+      </div>
+      <footer class="w3-container w3-blue">
+        <p></p>
+      </footer>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script>
+// Edit Profile Modal
+var modal = document.getElementById('id01');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+<div class="container-fluid">
+    <div class="row">
+      <span class="col-sm-2 left" >
+      	<br>
+        <nav class="nav flex-column">
+            <h6>My Stuff</h6>
+            <a class="nav-link" href="#">Courses</a>
+           <h6>My Account</h6>
+            <a class="nav-link" href="#">Progress</a>
+            <a class="nav-link" href="#">Profile</a>
+            <a class="nav-link" href="#">Teachers</a>
+          </nav>
+      </span>
+      <div class="col-sm-8">
+      	<br>
+  <h2>Total there will be approx 6 questions each of 3 marks , from all the chapters of the syllabus(Attempt any 5).</h2>
+<button class="accordion"><span class="spinner-grow spinner-grow-sm"></span>Basic Electrical Engineering December 2016 </button>
+<div class="panel">
+ <p><ol type="1">
+	 <li>Question no 1 is compulsory.
+	 <li>Answer any three from remaining 5 questions.
+	 </ol>		
+	 
+	<ol type = "1">
+	<li>
+	<ol type ="a">
+	<li>State Maximum Power Transfer Theorem.[2]
+	<li>Derive the formula to convert a delta circuit into an equivalent star.[4]
+	<li>Define average value and RMS value of an alternating quantity.[4]
+	<li>Prove that power in a 3-phase delta connected system is 3 times that of a star connected system.[4]
+	<li>Explain the working principle of a single phase transformer.[4]
+	<li>What is the use of commutator in a DC machine.[2]
+
+    </ol>
+	<li> <br>
+	<ol type = "a">
+	<li>Obtain current through 1ohm resistance by using Super position theorem,in foll fig.[10]<br>
+		<img id="2a" src="bee_2a.jpg"><br>
+	<li>A coil is connected across a non-inductive resistance of 120 ohm.When a 240V,50Hz supply is applied to this circuit the coil draws a current 5A and total current is 6A.Determine the power and power factor of<br>[10]
+		<ol type="i"><li>the coil
+					<li>the whole circuit
+		</ol>
+	
+	</ol>
+	<li><br>
+	<ol type ="a">
+	<li>Obtain Norton's equivalent circuit of the network shown in fig. across the terminals A and B.[10]<br>
+	<img id="3a" src="bee_3a.jpg"><br>
+	<li>A series RLC circuit,if w<sub>0</sub> is the resonant frquency,w<sub>1</sub> and w<sub>2</sub> are the half power frequencies,prove that w<sub>0</sub>=<span style="content: \221A;">&#8730;</span>(w<sub>1</sub>w<sub>2</sub>)[5]
+	<li>Derive the equivalent circuit of a 1-phase transformer.[5]
+	</ol>
+	<li><br>
+	<ol type ="a">
+	<li>Obtain current through 15ohm resistance by nodal analysis in fig.Take reference node as marked.[10]<br>
+		<img id="4a" src="bee_4a.jpg"><br>
+	<li>In a balanced 3 phase,star connected system a wattmeter is connected with its current coil in series with Y line and pressure coil between Y and R lines.[10]
+		Draw a neat circuit diagram showing the above wattmeter connection.Assuming a lagging power factor,draw the corresponding phasor diagram and derive the wattmeter reading in terms of line voltage,line current and phase angle.
+	</ol>
+	<li> <br>
+	<ol type ="a">
+	<li>Obtain current through 60ohm resistance by Mesh analysis in fig.[6]<br>
+		<img id="5a" src="bee_5a.jpg"><br>
+	<li>Develope the phasor diagram of a single transformer supplying to a resistive load.[8]
+	<li>Derive the emf equation of a DC generator.[6]
+	</ol>
+	
+	<li> <br>
+	<ol type="a">
+	<li>A resistor and a pure reactance are connected in series across a 150V ac supply.When the frequency is 40Hz,the circuit draws 5A.[10]
+		When the frequency is increased to 50Hz,the circuit draws 6A.Find the value of resistance and the element value of reactance.Also find the power drawn in second case.
+	<li>A single phase 10KVA,500V/250V,50Hz transformer has the following constants.[10]<br>
+		Resistance : primary=0.2ohms,	secondary=0.5ohms<br>
+		Reactance :  primary=0.4ohms,	secondary=0.1ohms<br>
+		Resistance of equivalent exciting circuit w.r.t primary=1500ohms.<br>
+		Reactance of equivalent exciting circuit w.r.t primary=750ohms.<br>
+		What will be the reading of the instruments placed in primary side when the transformer is connected for OC and SC tests.
+		
+	</ol>
+	
+	</p>
+</div>
+<button class="accordion"><span class="spinner-grow spinner-grow-sm"></span>Basic Electrical Engineering December 2017</button>
+<div class="panel">
+ <p><ol type="1">
+		<li>Question no 1 is compulsory.
+		<li>Answer any three from remaining 5 questions.
+		</ol>
+	 
+	<ol type = "1">
+	<li>Answer any five:	[20]
+		
+	<ol type ="a">
+	<li>A voltage v(t)=282.85sin(100&Pi;t) is applied to a coil,having resistance of 20ohms in series with inductance of 31.83 mH.Find<br>
+		<ol type="i">
+		<li>RMS value of voltage;
+		<li>RMS value of current;
+		<li>power dissipated in the coil advantages
+		<li>power factor of coil.	
+		</ol>
+	
+	<li>Derive the relation between line voltage and phase voltage in star connected three phase system.
+	<li>Find the node voltage V<sub>2</sub> by nodal analysis.<br>
+		<img id="17_1c" src="bee17_1c.jpg" style="height:40vh;width:50vh;"><br>
+	<li>A single phase transformer has a ratio(N<sub>1</sub>/N<sub>2</sub>) of 2:1 and is connwected to a resistive load.Find the value of primary current (both angle and magnitude in reference to flux),if the magnetizizng current is 1A and the secondary current is 4A.Neglect core losses and leakage reactance.Draw the corresponding phasor diagram.
+	<li>Find the Norton's equivalent of the given circuit across Rx.<br>
+		<img id="17_1e" src="bee17_1e.jpg" style="height:40vh;width:50vh;"><br>
+	<li>A coil having a resistance of 20ohms and an inductance of 0.1 H is connected in series with a 50&mu;F capacitor.An alternating voltage of 250V is applied to the circuit.At what value of frequency will the current in the circuit be maximum?What is the value of this current?Also find the voltage across the inductor and quality factor.
+	</ol>
+	<li> <br>
+	<ol type = "a">
+	<li>With necessary diagrams,prove that three phase power can be measured by only two watt meters.Also prove that reactive power can be measured from the wattmeter readings.	[10]
+	<li>A circuit has L=0.2H and inductive resistance 20ohms is connected in parallel with 200&mu;F capacitor with variable frequency,230V supply.Find the resonant frequency and impedance at which the total current taken from the supply is in phase with supply voltage.Draw the phasor diagram and derive the formula used(both impedance and frequency).Also find the value of supply current and the capacitor current.	[10]
+	</ol>
+	<li><br>
+	<ol type ="a">
+	<li>Two impedances 14+5j ohms and 18+10j ohms are connected in parallel across 200V,50Hz,single phase supply.Determine:	[4]
+		<ol type="i">
+		<li>Admittance of each branch in polar form;
+		<li>Current in each branch in polar form;
+		<li>Power factor of each branch;
+		<li>Active factor of each branch;
+		<li>reactive power in each branch.
+		</ol>
+	<li>Derive the emf equation of a single phase transformer.Find the value of the maximum flux in a 25kVA,3000/240V,single phase transformer with 500 turns on the primary.The primary winding is connected to 3000V,50Hz supply.Find the primary and secondary currents.Neglect all voltage drops.	[6]
+	<li>Compare core type and shell type transformer(any 4 points). 	[4]
+	</ol>
+	<li><br>
+	<ol type ="a">
+	<li>An alternating voltage is represented by v(t)=141.4 sin(377t)V.Derive the RMS value of this voltage.Find:	[12]
+		<ol type="i">
+		<li>instataneous value at t=3ms.
+		<li>the time taken by the voltage to reach 70.7V for the first time.	
+		</ol>
+	<li>State Superposition theorem.Find I<sub>x</sub> using Superposition Theorem without using source transformation technique,	[12]<br>
+		<img id="17_4b" src="bee17_4b.jpg" style="height:40vh;width:50vh;"><br>
+	</ol>
+	<li> <br>
+	<ol type ="a">
+	<li>State and prove maximum power transfer theorem.Find the value of the resistance R<sub>L</sub> using maximum power transfer theorem and find the value of maximum power transferred.	[10]<br>
+		<img id="17_5a" src="bee17_5a.jpg" style="height:40vh;width:50vh;"><br>
+	<li>A balanced load of phase impedance 100ohms and power factor 0.8(lag) is connected in delta to a 400V,3-phase supply.Calculate:	[10]
+		<ol type="i">
+		<li>phase current and line current.
+		<li>active power and reactive power.If the load is reconnected in star across the same supply,find 
+		<li>phase voltage and line voltage.
+		<li>phase current and line current.What will be the wattmeter readings if the power is measured by two wattmeter method(either star or delta).
+	
+		</ol>
+	</ol>
+	
+	<li> <br>
+	<ol type="a">
+	<li>The readings when open circuit and short circuit tests are conducted on a 4kVA,200/400V,50Hz,single phase transformer are given below.Find the equivalent circuit parameters and draw the equivalent circuit referred to primary.Also find the transformer efficiency and regulation at full load and half load for 0.8pf lagging.	[12]
+		<img id="17_6a" src="bee17_6a.jpg" style="height:40vh;width:70vh;"><br>
+	<li>With neat diagram explain main parts of a d.c. machine?Mention the functions of each part.	[8]
+	</ol>
+	
+	</p>
+</div>
+<button class="accordion"><span class="spinner-grow spinner-grow-sm"></span>Basic Electrical Engineering December 2018</button>
+<div class="panel">
+ <p>
+	<ol type="1">
+		<li>Question no 1 is compulsory.
+		<li>Answer any three from remaining 5 questions.
+		</ol>
+	<ol type="1"><li>Answer any five:	[20]
+		
+	<ol type ="a">
+	<li>Find the RMS value of the waveform given below.<br>
+		<img id="18_1a" src="bee18_1a.jpg"><br>
+    <li>State Norton’s theorem and draw the Norton’s equivalent circuit.
+	<li>In an R-L-C parallel circuit the current through the resistor,inductor(pure)and capacitor (pure) are 20 A, 15 A and 40 A respectively. What is the current taken from the supply? Draw the phasor diagram.
+	<li>A balanced 3-Φ, star-connected load consists of three coils each consisting of R=6Ω and XL=8Ω.Determine the line current, power factor when the load is connected across 400V,50 Hz supply.
+	<li>Briefly explain the classification of dc machine.
+	<li>Draw the phasor diagram of a single phase transformer when it is loaded with a lagging power factor load.
+	</ol>
+	<li> <br>
+	<ol type = "a">
+	<li>Prove that the average power taken by a pure capacitor fed with a sinusoidal ac supply in a cycle is zero.	[10]
+	<li>Using mesh analysis find the mesh currents in the direction shown and also find the voltage across A and B terminals.	[10]
+			<img id="18_2b" src="bee18_2b.jpg"><br>
+	</ol>
+	<li><br>
+	<ol type ="a">
+	<li>A single phase transformer has 1000 turns on the primary and 200 turns on the secondary. The no load current is 3A at a power factor of 0.2 lag and the secondary current is 280A at a power factor of 0.8 lag. Neglect R<sub>2</sub>and X<sub>2</sub>.Calculate(i)Magnetizing component and loss component of no load current; (ii)Primary current(iii)Input power factor.Draw the phasor diagram showing all these currents.	[10]
+	<li>Derive the formula for resonant frequency of the circuit with a pure capacitor in parallel with a coil having resistance and inductance. Find the expression for dynamic resistance of this parallel resonant circuit.	[10]
+	</ol>
+	<li><br>
+	<ol type ="a">
+	<li>Find current I<sub>x</sub> using Superposition theorem.	[10]<br>
+		<img id="18_4a" src="bee18_4a.jpg"><br>
+	<li>A resistance and a capacitance connected in series across a 250V supply draws 5A at 50 Hz. When frequency is increased to 60 Hz, it draws 5.8A. Find the values of R & C. Also find active power and power factor in both cases.	[10]
+	</ol>
+	<li> <br>
+	<ol type ="a">
+	<li> Find the node voltages V<sub>1</sub>, V<sub>2</sub> and V<sub>3</sub> and current through 0.5Ω.	[10]
+		<img id="18_5a" src="bee18_5a.jpg"><br>
+	<li>Describe the basic principle of operation of a single phase transformer and derive the emf equation.	[10]
+	</ol>
+	
+	<li> <br>
+	<ol type="a">
+	<li>Determine the value of R for maximum power transfer and find the value of maximum transfer.	[10]
+			<img id="18_6a" src="bee18_6a.jpg"><br>
+	<li>The O.C and S.C test data are given below for a single phase, 5 kVA, 200V/400V, 50Hz transformer.	[10]<br>
+			O.C test from LV side: 200V	1.25A	150W<br>
+			S.C test from HV side: 20V   12.5A	175W<br>
+			Determine the following: (i)Draw the equivalent circuit of the transformer referred to LV side (ii) At what load or kVA the transformer is to be operated for maximum efficiency? (iii) Calculate the value of maximum efficiency. (iv) Regulation of the transformer at full load 0.8 power factor lag.
+			
+	</ol>
+	
+	</p>
+</div>
+<button class="accordion"><span class="spinner-grow spinner-grow-sm"></span>Basic Electrical Engineering May 2017</button>
+<div class="panel">
+ <p><ol type="1">
+		<li>Question no 1 is compulsory.
+		<li>Answer any three from remaining 5 questions.
+		</ol>
+	<ol type = "1"> 
+	<li>
+	<ol type ="a">
+	<li>Find the ratio V<sub>1</sub>/V<sub>s</sub> in the circuit shown below using Kirchoff's laws.	[4]
+		<img id="m17_1a" src="beem17_1a.jpg"><br>
+	<li>Find the rms value for the folllowing waveform.	[4]
+		<img id="m17_1b" src="beem17_1b.jpg"><br>
+	<li>Draw the phasor diagram for a three phase star connected load with leading power factor.Indicate all the line and phase voltages and currents.	[4]
+	<li>A 5kVA,240/2400 V,50Hz single phase transformer has the maximum value of flux density as 1 Tesla.If the emf per turn is 10.Calculate the number of primary and secondary turns and the full load primary and secondary turns.	[4]
+	<li>Explain the principle of operation of DC generator.	[4]
+	</ol>
+	<li> <br>
+	<ol type = "a">
+	<li>Find the current through 3 ohm resistor by mesh analysis.	[4]<br>
+			<img id="m17_2a" src="beem17_2a.jpg"><br>
+	<li>Find the current delivered by the source.	[8]<br>
+			<img id="m17_2b" src="beem17_2b.jpg"><br>
+	<li> The voltage and current in a circuit are given by v&#773;=12 angle 30° V and i&#773; =3 angle 60° A. The frequency of the supply is 50 Hz.	[8]
+		 Find i) Equation for voltage and current in both the rectangular and standard form. ii) Impedance, reactance and resistance, iii) phase difference, power factor and power loss. 
+		Draw the circuit diagram considering a simple series circuit of two elements indicating their values.
+	</ol>
+	<li><br>
+	<ol type ="a">
+	<li>Find the resultant voltage and its equation for the given voltages which are connected in series.	[4]<br>
+		e<sub>1</sub>=2sinwt, e<sub>2</sub>=-cos(wt-&Pi;/6), e<sub>3</sub>=2cos(wt-&pi;/4), e<sub>4</sub>=-2sin(wt+&Pi;/3).<br>
+	<li>Find the current through 20 ohm resistor by using superposition theorem.	[8]
+			<img id="m17_3b" src="beem17_3b.jpg"><br>
+	<li> Two parallel branches of a circuit comprise respectively of i) a coil having 5 ohm resistance and inductance of 0.05 H. ii)a capacitor of capacitance 100 &mu;F in series with a resistance of 10 ohm. The current is connected to a 100 V, 50 Hz supply. Find	[8]<br>
+		(i) impedance and admittance of each branch<br>
+		(ii) equivalent admittance and impedance of the circuit,<br>
+		(iii) the supply current and power factor of the circuit.<br>
+		Draw its equivalent series circuit using two elements indicating their values.
+	</ol>
+	<li><br>
+	<ol type ="a">
+	<li>How are DC macgines classified?	[4]
+	<li>Find the current through 10ohm resistor by using Norton's theorem.	[8]
+			<img id="m17_4b" src="beem17_4b.jpg"><br>
+	<li>An indtuctive coil has a resistance of 20 ohm and inductance of 0.2 H. It is connected in parallel with a capacitor of 20 &mu;F. This combination is connected across a 230 V supply having variable frequency. Find the frequency at which [8]
+		total current drawn from the supply is in phase with the supply voltage.
+		What is this condition called? Find the values of total current drawn and the
+		impedance of the circuit at this frequency. Draw the phasor diagram and indicate the various currents & voltages in the circuit.
+	</ol>
+	<li> <br>
+	<ol type ="a">
+	<li>A coil having a resistance of 20 ohm and inductance of 0.2 H is connected across a 230 V,50 Hz supply.Calculate	[4]<br>
+		<ol type="i">
+		<li>circuit current
+		<li>phase angle
+		<li>power factor
+		<li>power consumed
+		</ol>
+	<li>A balanced three phase delta connected load draws a power of 10 kW, with a power factor of 0.6 leading when supplied with an ac supply of 440 V, 50Hz. 	[8]
+		Find the circuit elements of the load per phase assuming a simple series circuit of two elements.
+	<li>Draw and explain the phasor diagram of a single phase transformer No-load.	[8]
+	</ol>
+	
+	<li> <br>
+	<ol type="a">
+	<li>Explain the various losses of a single phase transformer.	[4]
+	<li>Two wattmeters connected to measure power in a three phase circuit using the 
+		two wattmeter method indicate 1250 W and 250 W respectively.Find the total power supplied and the power factor of the circuit: when [8]<br>
+		(i)both the readings are positive,
+		(ii)when the latter reading is obtained by reversing the connections of the pressure coil.
+	<li>A 200/400 V,50Hz single phase transformer gave the following test results:[8]<br>
+		OC test:200V	0.7A	70W(on lv side)<br>
+		SC test:15V	10A	85W (on hv side)<br>
+		Obtain the parameters and draw the equivalent circuit of the transformer as referred to the primary.
+	</ol>
+	
+	</p>
+</div>
+<button class="accordion"><span class="spinner-grow spinner-grow-sm"></span>Basic Electrical Engineering May 2018</button>
+<div class="panel">
+ <p><ol type="1">
+		<li>Question no 1 is compulsory.
+		<li>Answer any three from remaining 5 questions.
+		</ol>		
+	 <ol type = "1"><li>Answer any five:	[20]<br>
+	
+	<ol type ="a">
+	<li>What is the difference between ideal source and actual source?Illustrate the concept using the V-I charactristics of voltage and current source.
+	<li>In a balanced three phase circuit the power factor is 0.866.What will be the ratio of two wattmeter reading if the power is measured using two wattmeters.
+	<li>Calculate R<sub>AB</sub><br>
+		<img id="m18_1c" src="beem18_1c.jpg"><br>
+	<li>Derive the equation for resonance frequency for a parallel circuit in which a capacitor is connected in parallel with a coil having resistance R and inductive reactance X<sub>L</sub>.What is the resonance frequency if inductor is ideal?
+	<li>What re the classifications of DC motor?Specify one application for each one.
+	<li>Derive emf equation of a single phase transformer.
+    </ol>
+	<li> <br>
+	<ol type = "a">
+	<li>Using mesh analysis find current through 5ohm.	[8]
+			<img id="m18_2a" src="beem18_2a.jpg"><br>
+	<li>An emf of 250V is applied to an impedance Z<sub>1</sub>=(12.5+20j)ohm.An impedance Z<sub>2</sub> is added in series with Z<sub>1</sub>,the current become half of the original and lead the supply voltage by 20<sup>o</sup>.Determine Z<sub>2</sub>.	[8]
+	<li>Determine the potential difference V<sub>AB</sub> for the given network.[4]
+		<img id="m18_2c" src="beem18_2c.jpg"><br>
+	</ol>
+	<li><br>
+	<ol type ="a">
+	<li>When a voltage of 100V,50Hz is applied to an impedance A current taken is 8A lagging and power is 120W.When it is connected to an impedance B the current is 10A leading and power is 500W.What current and power will be taken if it is applied to the two impedances connected in series.	[8]
+	<li>Find the current through 10ohm using Thevenin's theorem.	[8]
+			<img id="m18_3b" src="beem18_3b.jpg"><br>
+	<li>With the help of equivalent circuit of a single phase transformer show how total copper loss can be represented in primary of a transformer.[4]
+	</ol>
+	<li><br>
+	<ol type ="a">
+	<li>Find V<sub>L</sub> using super position theorem.[8]
+		<img id="m18_4a" src="beem18_4a.jpg"><br>
+	<li>In an R-L-C parallel circuit the curren through the resistor,inductor and capacitor are 20A,15A and 40A respectively.What is the current taken from supply?Draw phasor diagram.	[4]
+	<li>Two sinusoidal sources of emf have rms value E<sub>1</sub> and E<sub>2</sub>.When connected is series with a phase displacement &alpha; the resultant voltage read on an electrodynamometer voltmeter is 41.1V and with one source reversed 17.52V.When the phase displacement made zero a reading of 42.5 is observed.Calculate E<sub>1</sub>,E<sub>2</sub> and &alpha;.[8]
+	</ol>
+	<li> <br>
+	<ol type ="a">
+	<li>Prove that the power ina balanced three phase delta connected circuit can be deduced from the readings of two wattmeter.Draw relevant connections and vector diagrams.Draw a table to show the effect of power factor on wattmeter.	[8]<br>
+	<li>A 5kVA 200/400,50Hz single phase transformer gave the following test results.	[8]<br>
+			<img id="m18_5b" src="beem18_5b.jpg"><br>
+			<ol type="i">
+				<li>Draw the equivalent circuit of the transformer and insert all parameters values.
+				<li>Efficiency at 0.9 pf lead and rated load.
+				<li>Current at which efficiency is maximum.
+			</ol>
+	<li>Prove that if the phase impedances are same,power drawn by a balanced delta connected load is three times the power drawn by the balanced star connected load.	[4]
+	</ol>
+	
+	<li> <br>
+	<ol type="a">
+	<li>Three identical coils each having a reactance of 20ohm and resistance of 10ohm are connected in star across a 440V three phase line.Calculate for each method:	[6]
+		<ol type="i">
+		<li>Line current and phase current.
+		<li>Active,reactive and apparent power.
+		<li>Reading of each wattmeter connected to measure the power.
+		</ol>
+	<li>A series resonant circuit has an impedance of 500ohm at resonant frequency.The cut of frequency observed are 10kHz and 100Hz.Determine:	[6]
+		<ol type="i">
+			<li>Resonant frequency.
+			<li>Value of R,L,C.
+			<li>Q factor at resonance.
+		</ol>
+	<li>Draw and illustrate transformer phasor diagram for lagging power factor.	[6]
+	</ol>
+	
+	</p>
+</div>
+<button class="accordion"><span class="spinner-grow spinner-grow-sm"></span>Basic Electrical Engineering May 2019</button>
+<div class="panel">
+
+ <p>	<ol type="1">
+		<li>Question no 1 is compulsory.
+		<li>Answer any three from remaining 5 questions.
+		</ol>	
+	<ol type = "1"><li>Answer any five:		[20]<br>
+	
+	<ol type ="a">
+	<li>Explain the working principle of Single Phase Transformer.
+	<li>Derive the formula to convert a Star circuit into equivalent Delta.
+	<li>Explain the principle of operation of DC motor.
+	<li>What is the necessary condition for resonance in series circuit? Derive the expression for resonance frequency.
+	<li>Find the value of R in the following circuit.<br>
+			<img id="m19_1e" src="beem19_1e.jpg"><br>
+	<li>Find the current through 4Ω resistor by source transformation in the following circuit;
+			<img id="m19_1f" src="beem19_1f.jpg"><br>
+    </ol>
+	<li> <br>
+	<ol type ="a">
+	<li>Determine the current through 8Ω resistor in the following Network by superposition theorem;[8]
+			<img id="m19_2a" src="beem19_2a.jpg"><br>
+	<li>An Inductive coil having inductance of 0.04H and resistance 25Ω has been connected in series with another inductive coil of inductance  0.2H and resistance 15Ω. The whole circuit is powered with 230V, 50Hz mains.[8]
+		Calculate the power dissipation in each coil and total power factor.
+	<li>What are the losses in transformer? Explain why the ratings of transformer in KVA not in KW.	[4]
+    </ol>
+	<li><br>	
+	<ol type ="a">
+	<li>With necessary diagrams prove that three phase power can be measured by only two wattmeters. Also prove that reactive power canbe measured from	[10]
+	the wattmeter reading .
+	<li>An alternating voltage is represented by v(t)=141.4sin(377t) V, Derive the RMS value of the voltage.	[10]<br>
+		Find<br>
+		<ol type="i">
+		<li>Instantaneous voltage value at t=3ms
+    	<li>The time taken for voltage to reach 70.7V for first time.
+		</ol>			
+	</ol>
+
+	<li><br>
+	
+	<ol type ="a">
+	<li>State and prove Maximum power transfer Theorem.[8]
+	<li>A 5KVA 1000/200V,50Hz Single phase transformer gave the following test result	[12]<br>
+		OC TEST( hv side): 1000V	0.24A	90 W<br>
+		SC TEST(hv side) :50V	5A	110 W<br>
+		Calculate<br>
+		<ol type="i">
+			<li>Equivalent circuit for transformer with circuit constant.
+			<li>Regulation at full load at 0.8lagging
+			<li>kVA load for maximum efficiency.
+		</ol>
+
+
+			
+    </ol>
+	<li> <br>
+
+	<ol type ="a">
+	<li>Three similar coils each having a resistance of 10Ω and inductance 0.04 H are connected in star across 3-phase 50HHz, 200V supply. Calculate the line current, total power absorbed, reactive colt amperes and total volt amperes.[8]
+	<li>In the following circuit find R for maximum power delivered to it. Also find maximum power delivered P<sub>max</sub>. [8]
+		<img id="m19_5b" src="bee19_5b.jpg"><br>
+	<li>Two impedances 12+j16Ω and 10-j20Ω are connected in parallel across 230V,50Hz Single phase ac supply. Find kW, kVA and kVAR and Power factor.[4]
+	</ol>
+	
+	<li> <br>
+
+	<ol type ="a">
+	<li>Draw and Explain the phasor diagram for the practical transformer connected to lagging power factor.[6]
+	<li>Find i) average value	ii) rms value[10]<br>
+		<img id="m19_6b" src="beem19_6b.jpg"><br>
+	<li>State and Explain Thevenin’s theorem and Norton’s theorem.[4]
+    </ol>
+	
+	</p>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+</body>
+</html>
